@@ -1,0 +1,64 @@
+.timer {
+    background-image: url('../Images/Images/bg.png');
+    height: 436px;
+    width: 100%;
+}
+.timer__content {
+    color: #fff;
+    width: 750px;
+    margin: 0 auto;
+}
+.timer__title {
+    padding-top: 60px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    text-align: center;
+}
+.timer__text {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+.timer__clock {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1.2vw;
+} 
+.timer__clock-item {
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 150px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.timer__clock-item_width {
+    display: block;
+    width:20%;
+}
+.timer__clock-titles {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.timer__clock-titles-item {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 1.5px;
+    display: block;
+    width: 20%;
+    text-align: center;
+}
+.timer-titles {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
