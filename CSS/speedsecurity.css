@@ -1,0 +1,42 @@
+.speed-security {
+    width: 100%;
+    background-color:#F2F2F2;
+}
+.speed-security__content {
+    display: flex;
+}
+.speed-security__image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.speed-security__img_z-index {
+    z-index: 0;
+}
+.speed-security__details {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+}
+.speed-security__title_margin-bottom {
+    margin-bottom: 5px;
+}
+.speed-security__title2_margin-bottom {
+    margin-bottom: 15px;
+}
+@media (max-width: 910px) {
+    .speed-security__content {
+        flex-wrap: wrap-reverse;
+    }
+    .speed-security__details {
+        width: 100%;
+        padding: 10vw 0;
+    }
+    .speed-security__image {
+        width: 100%;
+        margin-top: 0;
+    }
+}

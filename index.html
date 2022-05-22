@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="./CSS/header.css" rel="stylesheet">
-    <link href="./CSS/timer.css" rel="stylesheet">
-    <link href="./CSS/future.css" rel="stylesheet">
-    <link href="./CSS/features.css" rel="stylesheet">
-    <link href="./CSS/technology.css" rel="stylesheet">
-    <link href="./CSS/speedsecurity.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
     <title>Module 1</title>
 </head>
 <body>
@@ -36,7 +28,7 @@
         </header>
     </div>
 
-    <section class="timer">
+    <section class="timer timer_show">
         <div class="container">
             <div class="timer__content">
                 <h2 class="timer__title">big sale on lifetime plan</h2>
@@ -186,12 +178,12 @@
     </section>
     
     <section class="technology">
-        <div class="continer">
+        <div class="container">
             <div class="technology__content">
                 <div class="technology__details">
                     <div class="details">
-                        <h3 class="title-l1 title-l1_theme-light">TEchnology</h3>
-                        <h2 class="title-l2 title-l2_theme-light">Use H(app)y to give your digital photos some pop.</h2>
+                        <h3 class="title-l1 title-l1_theme-light details__title_margin-bottom">TEchnology</h3>
+                        <h2 class="title-l2 title-l2_theme-light details__title2_margin-bottom">Use H(app)y to give your digital photos some pop.</h2>
                         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                     </div>
                 </div>
@@ -209,13 +201,13 @@
             <div class="speed-security__content">
                 <div class="speed-security__image">
                     <div class="image">
-                        <img class="image__img" src="./Images/Images/Frame1.png" alt="">
+                        <img class="image__img speed-security__img_z-index" src="./Images/Images/Frame1.png" alt="">
                     </div>
                 </div>
                 <div class="speed-security__details">
                     <div class="details">
-                        <h3 class="title-l1 title-l1_theme-light">Speed & security</h3>
-                        <h2 class="title-l2 title-l2_theme-light">State-of-the-art processing capabilities.</h2>
+                        <h3 class="title-l1 title-l1_theme-light speed-security__title_margin-bottom">Speed & security</h3>
+                        <h2 class="title-l2 title-l2_theme-light speed-security__title2_margin-bottom">State-of-the-art processing capabilities.</h2>
                         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                     </div>
                 </div>
@@ -223,6 +215,6 @@
         </div>
     </section>
 
-    <script type="text/javascript" src="./JS/timer.js"></script>
+    <script src="./JS/timer.js"></script>
 </body>
 </html>
