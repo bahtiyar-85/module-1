@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="./CSS/header.css" rel="stylesheet">
     <link href="./CSS/timer.css" rel="stylesheet">
+    <link href="./CSS/future.css" rel="stylesheet">
+    <link href="./CSS/features.css" rel="stylesheet">
+    <link href="./CSS/technology.css" rel="stylesheet">
+    <link href="./CSS/speedsecurity.css" rel="stylesheet">
     <title>Module 1</title>
 </head>
 <body>
+
     <div class="container">
         <header class="header">
-            <div class="header-logo">
-                <img class="header-logo__icon" src="./Images/Images/logo.png" alt=""/>
-                <img class="header-logo__happy" src="./Images/Images/happy.png" alt=""/>
+            <div class="logo header__logo">
+                <img class="logo__icon header__logo-icon" src="./Images/Images/logo.png" alt=""/>
+                <img class="logo__text header__logo-text" src="./Images/Images/happy.png" alt=""/>
             </div>
-            <div class="header-links">
-                <a href="#" class="link">Features</a>
-                <a href="#" class="link">Pricing</a>
-                <a href="#" class="link">Testimonials</a>
-                <a href="#" class="link">FAQ</a>
-                <button class="button header-btn">Get this app</button>
-            </div>
+            <ul class="header__list">
+                <li class="header__item"><a href="#" class="header__link">Features</a></li>
+                <li class="header__item"><a href="#" class="header__link">Pricing</a></li>
+                <li class="header__item"><a href="#" class="header__link">Testimonials</a></li>
+                <li class="header__item"><a href="#" class="header__link">FAQ</a></li>
+                <li class="header__item"><button class="button header__btn">Get this app</button></li>
+            </ul>
             <button class="burger">
-                <img src="./Images/Icons/burger-menu.png" alt=""/>
+                <img src="./Images/Icons/burger-menu.svg" alt=""/>
             </button>
         </header>
     </div>
+
     <section class="timer">
         <div class="container">
             <div class="timer__content">
@@ -53,7 +59,170 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript" src="./JS/timer.js"></script>
 
+    <div class="container">
+        <section class="future">
+            <div class="future__details">
+                <div class="future__items">
+                    <div class="future__logo">
+                        <img class="future__logo-icon " src="./Images/Images/logo.png" alt=""/>
+                        <img class="future__logo-text" src="./Images/Images/happy.png" alt=""/>
+                    </div>
+                    <h1 class="future__title">The future of digital photos.</h1>
+                    <p class="future__description">The H(app)y app is the latest & greatest in phone photography. It's available in the App Store right now. Go check it out!</p>
+                    <button class="button future__buy_btn-width">buy now</button>
+                    <button class="button future__read_btn-width">read more</button>
+                </div>
+            </div>
+            <div class="future__image">
+                <div class="image">
+                    <img class="image__img" src="./Images/Images/Frame1.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <div class="features__header">
+                <h3 class="title-l1 title-l1_theme-dark">Features</h3>
+                <h2 class="title-l2 title-l2_theme-dark title-l2_position-center features__header-title_width">
+                    The latest & greatest in phone photography.
+                </h2>
+            </div>
+            <div class="features__cards">
+                <div class="card features__card_margin">
+                    <div class="card-top">
+                        <img class="card-top__img" src="./Images/Images/Frame21.png" alt="">
+                        <div class="card-top__icon card-top__icon_bg-color-blue">
+                            <img class="card-top__icon-img" src="./Images/Icons/icon-calendar.svg" alt="" >
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <h4 class="card-bottom__title card-bottom__title_color-blue">Calendar view</h4>
+                        <p class="card-bottom__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+                    </div>
+                </div>
+                <div class="card features__card_margin">
+                    <div class="card-top">
+                        <img class="card-top__img" src="./Images/Images/Frame22.png" alt="">
+                        <div class="card-top__icon card-top__icon_bg-color-orange">
+                            <img class="card-top__icon-img" src="./Images/Icons/icon-list.svg" alt="" >
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <h4 class="card-bottom__title card-bottom__title_color-orange">Lists</h4>
+                        <p class="card-bottom__description">Dolor sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.</p>
+                    </div>
+                </div>
+                <div class="card features__card_margin">
+                    <div class="card-top">
+                        <img class="card-top__img" src="./Images/Images/Frame23.png" alt="">
+                        <div class="card-top__icon card-top__icon_bg-color-yellow">
+                            <img class="card-top__icon-img" src="./Images/Icons/icon-aa.svg" alt="" >
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <h4 class="card-bottom__title card-bottom__title_color-yellow">Varied type</h4>
+                        <p class="card-bottom__description">Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue.</p>
+                    </div>
+                </div>
+                <div class="card features__card_margin">
+                    <div class="card-top">
+                        <img class="card-top__img" src="./Images/Images/Frame24.png" alt="">
+                        <div class="card-top__icon card-top__icon_bg-color-lilac">
+                            <img class="card-top__icon-img" src="./Images/Icons/icon-screen.svg" alt="" >
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <h4 class="card-bottom__title card-bottom__title_color-lilac">Split-screen</h4>
+                        <p class="card-bottom__description">Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus.</p>
+                    </div>
+                </div>
+                <div class="card features__card_margin">
+                    <div class="card-top">
+                        <img class="card-top__img" src="./Images/Images/Frame25.png" alt="">
+                        <div class="card-top__icon card-top__icon_bg-color-seawave">
+                            <img class="card-top__icon-img" src="./Images/Icons/icon-arrowup.svg" alt="" >
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <h4 class="card-bottom__title card-bottom__title_color-seawave">Uploads</h4>
+                        <p class="card-bottom__description">Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
+                    </div>
+                </div>
+                <div class="card features__card_margin">
+                    <div class="card-top">
+                        <img class="card-top__img" src="./Images/Images/Frame26.png" alt="">
+                        <div class="card-top__icon card-top__icon_bg-color-purple">
+                            <img class="card-top__icon-img" src="./Images/Icons/icon-focus.svg" alt="" >
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <h4 class="card-bottom__title card-bottom__title_color-purple">Focus mode</h4>
+                        <p class="card-bottom__description">Lorem sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="features__statistic">
+                <div class="container">
+                    <div class="features__statistic-items">
+                        <div class="statistic">
+                            <h2 class="statistic__value">400+</h2>
+                            <h3 class="title-l1 title-l1_theme-dark statistic__title">pictures analyzed</h3>
+                        </div>
+                        <div class="statistic">
+                            <h2 class="statistic__value">25+</h2>
+                            <h3 class="title-l1 title-l1_theme-dark statistic__title">Operations per minute</h3>
+                        </div>
+                        <div class="statistic">
+                            <h2 class="statistic__value">95%</h2>
+                            <h3 class="title-l1 title-l1_theme-dark statistic__title">accuracy</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <section class="technology">
+        <div class="continer">
+            <div class="technology__content">
+                <div class="technology__details">
+                    <div class="details">
+                        <h3 class="title-l1 title-l1_theme-light">TEchnology</h3>
+                        <h2 class="title-l2 title-l2_theme-light">Use H(app)y to give your digital photos some pop.</h2>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </div>
+                <div class="technology__image">
+                    <div class="image">
+                        <img class="image__img" src="./Images/Images/Frame31.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="speed-security">
+        <div class="container">
+            <div class="speed-security__content">
+                <div class="speed-security__image">
+                    <div class="image">
+                        <img class="image__img" src="./Images/Images/Frame1.png" alt="">
+                    </div>
+                </div>
+                <div class="speed-security__details">
+                    <div class="details">
+                        <h3 class="title-l1 title-l1_theme-light">Speed & security</h3>
+                        <h2 class="title-l2 title-l2_theme-light">State-of-the-art processing capabilities.</h2>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="./JS/timer.js"></script>
 </body>
 </html>
