@@ -1,11 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const timerEndDate = "01.07.2022 11:00";
+    const timerEndDate = "22.05.2022 12:18";
     const deadline = timerEndDate.substring(3,5)+'.'+timerEndDate.substring(0,2)+timerEndDate.substring(5);
     const deadlineDate = new Date(deadline);
     const clockElements = document.getElementsByClassName('timer__clock-item');
+    const timerElement = document.querySelector('.timer');
     let timerId = null;
- 
+
     function countdownTimer() {
         const differenceTime = deadlineDate.getTime() - Date.now();
         if(differenceTime>0){
@@ -22,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
            
         } else {
             clearInterval(timerId);
+            timerElement.classList.remove("timer_show");
+            timerElement.classList.add("timer_hide");
         }
     }
+    
     timerId = setInterval(countdownTimer, 1000);
 });

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import  url("./CSS/header.css");
+@import url("./CSS/timer.css");
+@import url("./CSS/future.css");
+@import url("./CSS/features.css");
+@import url("./CSS/technology.css");
+@import url("./CSS/speedsecurity.css");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 1240px){
+    .container {
+        max-width: 95vw;
+    }
+}
+
+.button {
+    height: 40px;
+    background: #222222;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+}
+.button:hover {
+    background: #4E4E4E;
+}
+.button:active {
+    transform: scale(.98);
+}
+.button:focus {
+    border: 2px solid #5AB0FF;
+}
+
+.image {
+    width: 376px;
+    height: 542px;
+    position: relative;
+}
+.image__img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.title-l1_theme-light {
+    color: #222222;
+}
+.title-l1_theme-dark {
+    color: #ffffff;
+} 
+.title-l2 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+}
+.title-l2_theme-light {
+    color: #222222;
+}
+.title-l2_theme-dark {
+    color: #ffffff;
+}
+.title-l2_position-center {
+    text-align: center;
+}
+
+.details {
+    width: 409px;
+}
+.details__title_margin-bottom {
+    margin-bottom: 5px;
+}
+.details__title2_margin-bottom {
+    margin-bottom: 15px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+}

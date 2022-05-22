@@ -50,31 +50,17 @@
     display: flex;
     justify-content: center;
 }
-.image {
-    width: 376px;
-    height: 542px;
-    position: relative;
-}
-.image__img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
+
 @media (max-width: 910px) {
     .future {
         flex-wrap: wrap;
     }
     .future__details {
         width: 100%;
+        padding: 10vw 0;
     }
     .future__image {
         width: 100%;
         margin-top: 5vw;
-    }
-    .future__details {
-        padding: 10vw 0;
     }
 }

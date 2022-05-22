@@ -10,21 +10,7 @@
     justify-content: center;
     margin: auto 0;
 }
-.details {
-    width: 409px;
-}
-.details__title_margin-bottom {
-    margin-bottom: 5px;
-}
-.details__title2_margin-bottom {
-    margin-bottom: 15px;
-}
-.text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #666666;
-}
+
 .technology__image {
     width: 50%;
     margin-top: 100px;

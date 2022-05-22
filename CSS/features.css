@@ -20,26 +20,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.title-l1_theme-light {
-    color: #222222;
-}
-.title-l1_theme-dark {
-    color: #ffffff;
-} 
-.title-l2 {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 36px;
-}
-.title-l2_theme-light {
-    color: #222222;
-}
-.title-l2_theme-dark {
-    color: #ffffff;
-}
-.title-l2_position-center {
-    text-align: center;
-}
+
 .features__cards {
     display: flex; 
     flex-wrap: wrap;
@@ -197,5 +178,8 @@
 @media (max-width: 520px) {
     .statistic {
         width: 120px;
+    }
+    .features__header-title_width {
+        width: 90vw;
     }
 }
