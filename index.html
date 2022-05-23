@@ -8,26 +8,26 @@
     <title>Module 1</title>
 </head>
 <body>
-
-    <div class="container">
-        <header class="header">
-            <div class="logo header__logo">
-                <img class="logo__icon header__logo-icon" src="./Images/Images/logo.png" alt=""/>
-                <img class="logo__text header__logo-text" src="./Images/Images/happy.png" alt=""/>
+    <header class="header">
+        <div class="container">
+            <div class="header__navbar">
+                <div class="logo header__logo">
+                    <img class="logo__icon header__logo-icon" src="./Images/Images/logo.png" alt=""/>
+                    <img class="logo__text header__logo-text" src="./Images/Images/happy.png" alt=""/>
+                </div>
+                <ul class="header__list">
+                    <li class="header__item"><a href="#features" class="header__link">Features</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Pricing</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Testimonials</a></li>
+                    <li class="header__item"><a href="#" class="header__link">FAQ</a></li>
+                    <li class="header__item"><button class="button header__btn">Get this app</button></li>
+                </ul>
+                <button class="burger">
+                    <img src="./Images/Icons/burger-menu.svg" alt=""/>
+                </button>
             </div>
-            <ul class="header__list">
-                <li class="header__item"><a href="#features" class="header__link">Features</a></li>
-                <li class="header__item"><a href="#" class="header__link">Pricing</a></li>
-                <li class="header__item"><a href="#" class="header__link">Testimonials</a></li>
-                <li class="header__item"><a href="#" class="header__link">FAQ</a></li>
-                <li class="header__item"><button class="button header__btn">Get this app</button></li>
-            </ul>
-            <button class="burger">
-                <img src="./Images/Icons/burger-menu.svg" alt=""/>
-            </button>
-        </header>
-    </div>
-
+        </div>
+    </header>
     <section class="timer timer_show">
         <div class="container">
             <div class="timer__content">
@@ -215,6 +215,32 @@
         </div>
     </section>
 
+    <section class="mode mode_theme-dark">
+        <div class="container">
+            <div class="mode__items">
+                <h3 class="title-l1 title-l1_theme-dark mode__title-l1_margin">dark mode</h2>
+                <h2 class="title-l2 title-l2_theme-dark mode__title-l2_margin">Also available in <span class="mode__title-word_color-yellow">dark</span>.</h2>
+                <p class="mode__description mode__description_theme-dark">
+                    Don't get blinded when using the H(app)y app at night, just turn off the lights. Lorem ipsum dolor sit amet.
+                </p>
+                <div class="mode__image">
+                    <img class="mode__image-img" src="./Images/Images/Frame51.png" alt="">
+                </div>
+                <div class="mode__toggle-items">
+                    <div class="mode__light-theme">
+                        <img class="mode__sun mode__img_margin" src="./Images/Icons/sun-white.svg" alt="">
+                        <span class="title-l1 title-l1_theme-dark">light mode</span>
+                    </div>
+                    <div class="mode__dark-theme">
+                        <img class="mode__moon mode__img_margin" src="./Images/Icons/moon-yellow.svg" alt="">
+                        <span class="title-l1 mode__title_yellow">dark mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="./JS/timer.js"></script>
+    <script src="./JS/mode.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+.image {
+    width: 376px;
+    height: 542px;
+    position: relative;
+}
+.image__img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

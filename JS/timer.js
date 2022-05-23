@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const timerEndDate = "22.05.2022 12:18";
+    const timerEndDate = "03.06.2022 00:00";
     const deadline = timerEndDate.substring(3,5)+'.'+timerEndDate.substring(0,2)+timerEndDate.substring(5);
     const deadlineDate = new Date(deadline);
     const clockElements = document.getElementsByClassName('timer__clock-item');
