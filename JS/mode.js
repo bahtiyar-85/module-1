@@ -28,16 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if(modeElem.classList.contains("mode_theme-dark")){
             toggleMode();
             modeSpanElem.textContent = "light";
-            document.querySelector(".mode__sun").setAttribute("src", "./Images/Icons/sun-yellow.svg");
-            document.querySelector(".mode__moon").setAttribute("src", "./Images/Icons/moon-black.svg");
+            document.querySelector(".mode__sun").setAttribute("src", "./src/icons/sun-yellow.svg");
+            document.querySelector(".mode__moon").setAttribute("src", "./src/icons/moon-black.svg");
         }
     });
     darkModeBtnElem.addEventListener('click', function(){
         if(modeElem.classList.contains("mode_theme-light")){
             toggleMode();
             modeSpanElem.textContent= "dark";
-            document.querySelector(".mode__sun").setAttribute("src", "./Images/Icons/sun-white.svg");
-            document.querySelector(".mode__moon").setAttribute("src", "./Images/Icons/moon-yellow.svg");
+            document.querySelector(".mode__sun").setAttribute("src", "./src/icons/sun-white.svg");
+            document.querySelector(".mode__moon").setAttribute("src", "./src/icons/moon-yellow.svg");
         }
     })
 });
