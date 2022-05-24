@@ -1,13 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import  url("./CSS/header.css");
-@import url("./CSS/timer.css");
-@import url("./CSS/future.css");
-@import url("./CSS/image.css");
-@import url("./CSS/features.css");
-@import url("./CSS/technology.css");
-@import url("./CSS/speedsecurity.css");
-@import url("./CSS/mode.css");
-
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
