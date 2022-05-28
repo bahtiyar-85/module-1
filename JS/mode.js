@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const lightModeBtnElem = document.querySelector(".mode__light-theme");
     const darkModeBtnElem = document.querySelector(".mode__dark-theme");
+    
     const toggleMode = () => {
         modeElem.classList.toggle("mode_theme-dark");
         modeElem.classList.toggle("mode_theme-light"); 

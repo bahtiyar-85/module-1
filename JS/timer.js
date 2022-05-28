@@ -1,17 +1,13 @@
+import config from "/src/data/config.json" assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', function() {
-    let timer;
+   
+    const timer = config.timerEndDate.split(/\s|\.|\:/);
     let timerId = null;
     const clockElements = document.getElementsByClassName('timer__clock-item');
     const timerElement = document.querySelector('.timer');
 
-    async function getData() {
-        const response = await fetch('./src/data/config.json');
-        return await response.json();
-    }
-
     function calcTime(timer) { 
-       
         const deadlineDate = new Date(timer[2], timer[1]-1, timer[0], timer[3], timer[4]);
         const differenceTime = deadlineDate.getTime() - Date.now();
         
@@ -51,10 +47,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    getData()
-    .then((data) => {
-        timer = data.timerEndDate.split(/\s|\.|\:/);
-        timerId = setInterval(countdownTimer, 1000);
-    });
-    
+    timerId = setInterval(countdownTimer, 1000);
 });

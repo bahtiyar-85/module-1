@@ -1,18 +1,13 @@
+import config from "/src/data/config.json" assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+    const plans = [ ...config.plans];
     const buyNow = document.querySelectorAll(".open-modal");
     const modal = document.querySelector(".modal");
     const modalClose = document.querySelector(".modal_close");
-    const radioLabel = document.querySelectorAll(".radio__label");
     const radioInput = document.querySelectorAll(".radio__input");
     const inputBox = document.querySelectorAll(".input");
     const form = document.querySelector(".request");
-    
-    async function getData() {
-        const response = await fetch('./src/data/config.json');
-        return await response.json();
-    }
 
     function firstLetterToUp(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -30,56 +25,31 @@ document.addEventListener('DOMContentLoaded', function() {
         return {valid: true, error: ""};
     }
     
-    getData()
-    .then((data) => {
+    function setRadioInputTitle(plans){
+        const radioLabel = document.querySelectorAll(".radio__label");
+
+        for(let i=0; i<radioLabel.length; i++){
+            radioLabel[i].textContent = firstLetterToUp(plans[i].name);
+        }
+    }
+
+    function setMaxPriceRadioInput(plans){
+        const radioLabel = document.querySelectorAll(".radio__label");
         let max = 0;
         let maxIndex = 0;
+        
         for(let i=0; i<radioLabel.length; i++){
-            radioLabel[i].textContent = firstLetterToUp(data.plans[i].name);
-            if(data.plans[i].price > max ){
-                max = data.plans[i].price;
+            if(plans[i].price > max ){
+                max = plans[i].price;
                 maxIndex = i;
             }
         }
         radioInput[maxIndex].checked = true;
-    });
-
-    modalClose.addEventListener("click", function(){
-        modal.classList.add("modal_hide");
-        modal.classList.remove("modal_show");
-    })
-
-    for(item of buyNow){
-        item.addEventListener('click', function(){
-            
-            modal.classList.add("modal_show");
-            modal.classList.remove("modal_hide");
-        })
     }
-
-    for(item of inputBox){
-        item.addEventListener('focusout', function(e){
-            const itemCheckIsValid = isValid(e.target.value);
-            if(!itemCheckIsValid.valid){
-                e.target.classList.add("input-error");
-                e.target.classList.remove("input-valid");
-                document.querySelector(`[for="${e.target.id}"]`).textContent = itemCheckIsValid.error;               
-            }
-        })
-    }
-
-    for(item of inputBox){
-        item.addEventListener('focus', function(e){
-            e.target.classList.remove("input-error");
-            e.target.classList.add("input-valid");
-            document.querySelector(`[for="${e.target.id}"]`).textContent = "";               
-        })
-    }
-
-   
+    
     function getDateFromForm(){
         let data = [];
-        for(item of form){
+        for(let item of form){
             if(item.type==="text" || item.type==="email"){
                 let obj = {
                     name: item.name,
@@ -106,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkBox = document.querySelectorAll(".checkbox__input");
         let formValid = true;
         let checked = false;
-        for(item of inputBox){
+        for(let item of inputBox){
             const itemCheckIsValid = isValid(item.value);
             if(!itemCheckIsValid.valid){
                 item.classList.remove("input-error");
@@ -115,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 formValid = false;
             }             
         }
-        for(item of checkBox){
+        for(let item of checkBox){
             if(item.checked === true){
                 checked = true;
             }
@@ -125,6 +95,40 @@ document.addEventListener('DOMContentLoaded', function() {
             formValid = false;
         }
         return formValid;
+    }
+
+    setRadioInputTitle(plans);
+
+    modalClose.addEventListener("click", function(){
+        modal.classList.add("modal_hide");
+        modal.classList.remove("modal_show");
+    })
+
+    for(let item of buyNow){
+        item.addEventListener('click', function(){
+
+            modal.classList.add("modal_show");
+            modal.classList.remove("modal_hide");
+        })
+    }
+
+    for(let item of inputBox){
+        item.addEventListener('focusout', function(e){
+            const itemCheckIsValid = isValid(e.target.value);
+            if(!itemCheckIsValid.valid){
+                e.target.classList.add("input-error");
+                e.target.classList.remove("input-valid");
+                document.querySelector(`[for="${e.target.id}"]`).textContent = itemCheckIsValid.error;               
+            }
+        })
+    }
+
+    for(let item of inputBox){
+        item.addEventListener('focus', function(e){
+            e.target.classList.remove("input-error");
+            e.target.classList.add("input-valid");
+            document.querySelector(`[for="${e.target.id}"]`).textContent = "";               
+        })
     }
 
     form.addEventListener('submit', function(e){
