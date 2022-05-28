@@ -220,9 +220,9 @@
     <section class="mode mode_theme-dark">
         <div class="container">
             <div class="mode__items">
-                <h3 class="title-l1 title-l1_theme-dark mode__title-l1_margin">dark mode</h2>
-                <h2 class="title-l2 title-l2_theme-dark mode__title-l2_margin">Also available in <span class="mode__title-word_color-yellow">dark</span>.</h2>
-                <p class="mode__description mode__description_theme-dark">
+                <h3 class="title-l1 mode__title-l1_margin" id="modetitle">dark mode</h2>
+                <h2 class="title-l2 mode__title-l2_margin">Also available in <span class="mode__title-word_color-yellow">dark</span>.</h2>
+                <p class="mode__description">
                     Don't get blinded when using the H(app)y app at night, just turn off the lights. Lorem ipsum dolor sit amet.
                 </p>
                 <div class="mode__image">
@@ -230,12 +230,16 @@
                 </div>
                 <div class="mode__toggle-items">
                     <div class="mode__light-theme">
-                        <img class="mode__sun mode__img_margin" src="./src/icons/sun-white.svg" alt="">
-                        <span class="title-l1 title-l1_theme-dark">light mode</span>
+                        <svg class="mode__sun mode__img_margin">
+                            <use href="./src/icons/sprite.svg#sun"></use> 
+                        </svg>
+                        <span class="title-l1">light mode</span>
                     </div>
                     <div class="mode__dark-theme">
-                        <img class="mode__moon mode__img_margin" src="./src/icons/moon-yellow.svg" alt="">
-                        <span class="title-l1 mode__title_yellow">dark mode</span>
+                        <svg class="mode__moon mode__img_margin">
+                            <use href="./src/icons/sprite.svg#moon"></use>
+                        </svg>
+                        <span class="title-l1">dark mode</span>
                     </div>
                 </div>
             </div>
@@ -250,20 +254,20 @@
                 <p class="text pricing__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
                 <div class="pricing__items">
                     <div class="price">
-                        <h3 class="price__title price__title_color-blue">Standart</h3>
-                        <h4 class="price__value price__title_color-blue">$9</h4>
+                        <h3 class="price__title price__title_color-blue"></h3>
+                        <h4 class="price__value price__title_color-blue"></h4>
                         <h5 class="title-l1 title-l1__theme-light price__title_margin">monthly</h5>
                         <button class="button price__btn_width price__btn_color-blue open-modal">buy now</button>
                     </div>
                     <div class="price">
-                        <h3 class="price__title price__title_color-red">premium</h3>
-                        <h4 class="price__value price__title_color-red">$99</h4>
+                        <h3 class="price__title price__title_color-red"></h3>
+                        <h4 class="price__value price__title_color-red"></h4>
                         <h5 class="title-l1 title-l1__theme-light price__title_margin">annually</h5>
                         <button class="button price__btn_width price__btn_color-red open-modal">buy now</button>
                     </div>
                     <div class="price">
-                        <h3 class="price__title price__title_color-yellow">lifetime</h3>
-                        <h4 class="price__value price__title_color-yellow">$149</h4>
+                        <h3 class="price__title price__title_color-yellow"></h3>
+                        <h4 class="price__value price__title_color-yellow"></h4>
                         <h5 class="title-l1 title-l1__theme-light price__title_margin">up front</h5>
                         <button class="button price__btn_width price__btn_color-yellow open-modal">buy now</button>
                     </div>
@@ -280,24 +284,24 @@
                 <p class="text testimonials__description">See what our customers are saying.</p>
                 <div class="testimonials__items">
                     <div class="testimonial">
-                        <p class="text testimonial__phrase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus.</p>
+                        <p class="text testimonial__phrase"></p>
                         <div class="testimonial__items">
-                            <p class="testimonial__author">Pam Beesly</p>
-                            <p class="testimonial__position">Top Manager Happy Co</p>
+                            <p class="testimonial__author"></p>
+                            <p class="testimonial__position"></p>
                         </div>
                     </div>
                     <div class="testimonial">
-                        <p class="text testimonial__phrase">Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam. Aenean porta neque eget consequat fringilla.</p>
+                        <p class="text testimonial__phrase"></p>
                         <div class="testimonial__items">
-                            <p class="testimonial__author">Michael Scott</p>
-                            <p class="testimonial__position">SMM Specialist</p>
+                            <p class="testimonial__author"></p>
+                            <p class="testimonial__position"></p>
                         </div>
                     </div>      
                     <div class="testimonial">
-                        <p class="text testimonial__phrase">Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus.</p>
+                        <p class="text testimonial__phrase"></p>
                         <div class="testimonial__items">
-                            <p class="testimonial__author">Angels Schrute</p>
-                            <p class="testimonial__position">CEO and CoFounder</p>
+                            <p class="testimonial__author"></p>
+                            <p class="testimonial__position"></p>
                         </div>
                     </div>            
                 </div>
@@ -311,11 +315,11 @@
                 <h2 class="title-l1">Download</h2>
                 <h3 class="title-l2 download__title">It's available right now!</h3>
                 <p class="download__description">Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
-                <button class="download__btn">
+                <a class="download__btn" href="#" target="_blank">
                     <img class="download__btn_apple" src="./src/icons/apple.svg" alt="">
                     <img class="download__btn_appstore" src="./src/icons/appstore.svg" alt="">
                     <img class="download__btn_download" src="./src/icons/download.svg" alt="">
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -441,9 +445,12 @@
         </div>
     </div>
 
-    <script type="module" src="./js/modal.js"></script>
-    <script type="text/javascript" src="./js/sidebar.js"></script>
     <script type="module" src="./js/timer.js"></script>
     <script type="text/javascript" src="./js/mode.js"></script>
+    <script type="module" src="./js/pricing.js"></script>
+    <script type="module" src="./js/testimonials.js"></script>
+    <script type="text/javascript" src="./js/sidebar.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/appstore.js"></script>
 </body>
 </html>

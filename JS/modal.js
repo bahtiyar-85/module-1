@@ -2,10 +2,8 @@ import config from "/src/data/config.json" assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', function() {
     const plans = [ ...config.plans];
-    const buyNow = document.querySelectorAll(".open-modal");
     const modal = document.querySelector(".modal");
     const modalClose = document.querySelector(".modal_close");
-    const radioInput = document.querySelectorAll(".radio__input");
     const inputBox = document.querySelectorAll(".input");
     const form = document.querySelector(".request");
 
@@ -33,19 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function setMaxPriceRadioInput(plans){
-        const radioLabel = document.querySelectorAll(".radio__label");
-        let max = 0;
-        let maxIndex = 0;
-        
-        for(let i=0; i<radioLabel.length; i++){
-            if(plans[i].price > max ){
-                max = plans[i].price;
-                maxIndex = i;
-            }
-        }
-        radioInput[maxIndex].checked = true;
-    }
+  
     
     function getDateFromForm(){
         let data = [];
@@ -103,14 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.classList.add("modal_hide");
         modal.classList.remove("modal_show");
     })
-
-    for(let item of buyNow){
-        item.addEventListener('click', function(){
-
-            modal.classList.add("modal_show");
-            modal.classList.remove("modal_hide");
-        })
-    }
 
     for(let item of inputBox){
         item.addEventListener('focusout', function(e){
