@@ -29,26 +29,45 @@
         </div>
     </header>
 
-    <section class="timer timer_show">
+    <section class="timer timer_hide">
         <div class="container">
             <div class="timer__content">
                 <h2 class="timer__title">big sale on lifetime plan</h2>
                 <p class="timer__text">there is very little left</p>
-                <ul class="timer__clock"> 
-                    <li class="timer__clock-item timer__clock-item_width">00</li>
-                    <li class="timer__clock-item">|</li>
-                    <li class="timer__clock-item timer__clock-item_width">00</li>
-                    <li class="timer__clock-item">|</li>
-                    <li class="timer__clock-item timer__clock-item_width">00</li>
-                    <li class="timer__clock-item">|</li>
-                    <li class="timer__clock-item timer__clock-item_width">00</li>
-                </ul>
-                <ul class="timer__clock-titles">
-                    <li class="timer__clock-titles-item">days</li>
-                    <li class="timer__clock-titles-item">hours</li>
-                    <li class="timer__clock-titles-item">minutes</li>
-                    <li class="timer__clock-titles-item">seconds</li>
-                </ul>
+                <div class="timer__clock">
+                    <div class="timer__clock-item">
+                        <div class="timer__clock-value timer__clock-value_right-border">
+                            <span class="timer__clock-value-span" id="days"></span>
+                        </div>
+                        <div class="timer__clock-title">
+                            <span class="timer__clock-title-span">days</span>
+                        </div>
+                    </div>
+                    <div class="timer__clock-item">
+                        <div class="timer__clock-value timer__clock-value_right-border">
+                            <span class="timer__clock-value-span" id="hours"></span>
+                        </div>
+                        <div class="timer__clock-title">
+                            <span class="timer__clock-title-span">hours</span>
+                        </div>
+                    </div>
+                    <div class="timer__clock-item">
+                        <div class="timer__clock-value timer__clock-value_right-border">
+                            <span class="timer__clock-value-span" id="minutes"></span>
+                        </div>
+                        <div class="timer__clock-title">
+                            <span class="timer__clock-title-span">minutes</span>
+                        </div>
+                    </div>
+                    <div class="timer__clock-item">
+                        <div class="timer__clock-value">
+                            <span class="timer__clock-value-span" id="seconds"></span>
+                        </div>
+                        <div class="timer__clock-title">
+                            <span class="timer__clock-title-span">seconds</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -220,7 +239,7 @@
     <section class="mode mode_theme-dark">
         <div class="container">
             <div class="mode__items">
-                <h3 class="title-l1 mode__title-l1_margin" id="modetitle">dark mode</h2>
+                <h3 class="title-l1 mode__title-l1_margin" id="modetitle">dark mode</h3>
                 <h2 class="title-l2 mode__title-l2_margin">Also available in <span class="mode__title-word_color-yellow">dark</span>.</h2>
                 <p class="mode__description">
                     Don't get blinded when using the H(app)y app at night, just turn off the lights. Lorem ipsum dolor sit amet.
@@ -254,21 +273,21 @@
                 <p class="text pricing__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
                 <div class="pricing__items">
                     <div class="price">
-                        <h3 class="price__title price__title_color-blue"></h3>
-                        <h4 class="price__value price__title_color-blue"></h4>
-                        <h5 class="title-l1 title-l1__theme-light price__title_margin">monthly</h5>
+                        <span class="price__title price__title_color-blue"></span>
+                        <span class="price__value price__title_color-blue"> </span>
+                        <span class="title-l1 title-l1__theme-light price__title_margin">monthly</span>
                         <button class="button price__btn_width price__btn_color-blue open-modal">buy now</button>
                     </div>
                     <div class="price">
-                        <h3 class="price__title price__title_color-red"></h3>
-                        <h4 class="price__value price__title_color-red"></h4>
-                        <h5 class="title-l1 title-l1__theme-light price__title_margin">annually</h5>
+                        <span class="price__title price__title_color-red"></span>
+                        <span class="price__value price__title_color-red"></span>
+                        <span class="title-l1 title-l1__theme-light price__title_margin">annually</span>
                         <button class="button price__btn_width price__btn_color-red open-modal">buy now</button>
                     </div>
                     <div class="price">
-                        <h3 class="price__title price__title_color-yellow"></h3>
-                        <h4 class="price__value price__title_color-yellow"></h4>
-                        <h5 class="title-l1 title-l1__theme-light price__title_margin">up front</h5>
+                        <span class="price__title price__title_color-yellow"></span>
+                        <span class="price__value price__title_color-yellow"></span>
+                        <span class="title-l1 title-l1__theme-light price__title_margin">up front</span>
                         <button class="button price__btn_width price__btn_color-yellow open-modal">buy now</button>
                     </div>
                 </div>
@@ -327,7 +346,7 @@
     <section class="faq" id="faq">
         <div class="container">
             <div class="faq__container">
-                <p class="faq__title">FAQ</p>
+                <h5 class="faq__title">FAQ</h5>
                 <p class="faq__desc">Some questions & some answers</p>
                 <div class="faq__items">
                     <div class="faq__item-block">
@@ -446,10 +465,10 @@
     </div>
 
     <script type="module" src="./js/timer.js"></script>
-    <script type="text/javascript" src="./js/mode.js"></script>
+    <script src="./js/mode.js"></script>
     <script type="module" src="./js/pricing.js"></script>
     <script type="module" src="./js/testimonials.js"></script>
-    <script type="text/javascript" src="./js/sidebar.js"></script>
+    <script src="./js/sidebar.js"></script>
     <script type="module" src="./js/modal.js"></script>
     <script type="module" src="./js/appstore.js"></script>
 </body>

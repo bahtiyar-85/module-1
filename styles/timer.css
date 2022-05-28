@@ -2,7 +2,7 @@
     background-image: url('../src/images/bg.png');
     height: 436px;
     width: 100%;
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
 .timer_show {
     display: block;
@@ -12,7 +12,7 @@
 }
 .timer__content {
     color: #fff;
-    width: 750px;
+    max-width: 850px;
     margin: 0 auto;
 }
 .timer__title {
@@ -33,43 +33,46 @@
     text-align: center;
 }
 .timer__clock {
-    list-style-type: none;
+    padding-top: 32px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin-left: 1.2vw;
-} 
+    justify-content: center;
+}
 .timer__clock-item {
+    width: 25%; 
+}
+.timer__clock-value {
+    width: 100%;
+}
+.timer__clock-value_right-border{
+    border-right: 9px solid #fff;
+}
+.timer__clock-title {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.timer__clock-value-span {
     font-weight: 400;
     font-size: 100px;
-    line-height: 150px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     letter-spacing: 1.1px;
     text-transform: uppercase;
-    text-align: center;
 }
-.timer__clock-item_width {
-    display: block;
-    width:20%;
-}
-.timer__clock-titles {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-}
-.timer__clock-titles-item {
+.timer__clock-title-span {
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
-    letter-spacing: 1.5px;
-    display: block;
-    width: 20%;
     text-align: center;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
 }
-.timer-titles {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 15px;
-}
-@media (max-width: 900px){
+
+/* @media (max-width: 900px){
     .timer__title{
         font-size: 40px;
     }
@@ -110,4 +113,4 @@
         line-height: 18px;
         font-size: 12px;
     }
-}
+} */
