@@ -63,7 +63,7 @@
                     </div>
                     <h1 class="future__title">The future of digital photos.</h1>
                     <p class="future__description">The H(app)y app is the latest & greatest in phone photography. It's available in the App Store right now. Go check it out!</p>
-                    <button class="button future__buy_btn-width">buy now</button>
+                    <button class="button future__buy_btn-width open-modal">buy now</button>
                     <button class="button future__read_btn-width">read more</button>
                 </div>
             </div>
@@ -253,19 +253,19 @@
                         <h3 class="price__title price__title_color-blue">Standart</h3>
                         <h4 class="price__value price__title_color-blue">$9</h4>
                         <h5 class="title-l1 title-l1__theme-light price__title_margin">monthly</h5>
-                        <button class="button price__btn_width price__btn_color-blue">buy now</button>
+                        <button class="button price__btn_width price__btn_color-blue open-modal">buy now</button>
                     </div>
                     <div class="price">
                         <h3 class="price__title price__title_color-red">premium</h3>
                         <h4 class="price__value price__title_color-red">$99</h4>
                         <h5 class="title-l1 title-l1__theme-light price__title_margin">annually</h5>
-                        <button class="button price__btn_width price__btn_color-red">buy now</button>
+                        <button class="button price__btn_width price__btn_color-red open-modal">buy now</button>
                     </div>
                     <div class="price">
                         <h3 class="price__title price__title_color-yellow">lifetime</h3>
                         <h4 class="price__value price__title_color-yellow">$149</h4>
                         <h5 class="title-l1 title-l1__theme-light price__title_margin">up front</h5>
-                        <button class="button price__btn_width price__btn_color-yellow">buy now</button>
+                        <button class="button price__btn_width price__btn_color-yellow open-modal">buy now</button>
                     </div>
                 </div>
             </div>
@@ -361,25 +361,90 @@
         </div>
     </footer>
 
-    <div class="sidebar sidebar_show">
+    <div class="sidebar sidebar_hide">
         <div class="sidebar__content">
             <div class="sidebar__logo">
                 <img class="sidebar__logo-icon" src="./src/icons/logo-icon.svg" alt="logo">
                 <img class="sidebar__logo-happy" src="./src/icons/logo-happy.svg" alt="happy">
-                <img class="sidebar__cross" src="./src/icons/cross.svg" alt="cross" >
+                <img class="sidebar__cross sidebar_close" src="./src/icons/cross.svg" alt="cross" >
             </div>
             <ul class="sidebar__list ">
-                <li class="sidebar__item"><a href="#features" class="header__link">Features</a></li>
-                <li class="sidebar__item"><a href="#pricing" class="header__link">Pricing</a></li>
-                <li class="sidebar__item"><a href="#testimonials" class="header__link">Testimonials</a></li>
-                <li class="sidebar__item"><a href="#faq" class="header__link">FAQ</a></li>
-                <li class="sidebar__item"><button class="button sidebar__btn">Get this app</button></li>
+                <li class="sidebar__item sidebar_close"><a href="#features" class="header__link">Features</a></li>
+                <li class="sidebar__item sidebar_close"><a href="#pricing" class="header__link">Pricing</a></li>
+                <li class="sidebar__item sidebar_close"><a href="#testimonials" class="header__link">Testimonials</a></li>
+                <li class="sidebar__item sidebar_close"><a href="#faq" class="header__link">FAQ</a></li>
+                <li class="sidebar__item sidebar_close"><button class="button sidebar__btn">Get this app</button></li>
             </ul>
         </div>
     </div>
 
-    <script src="./js/config.js"></script>
-    <script src="./js/timer.js"></script>
-    <script src="./js/mode.js"></script>
+    <div class="modal modal_hide">
+        <div class="modal__content">
+            <form class="request" action="#" onsubmit="">
+                <p class="request__title">Leave a request for the purchase of goods</p>
+                <div class="request__input-items">
+                    <input class="input input-valid request__name" type="text" name="fullname" placeholder="name" id="name">
+                    <label class="input-error-message request__name-error" for="name"></label>
+                    <input class="input input-valid request__email" type="email" name="email" placeholder="email" id="email">
+                    <label class="input-error-message request__email-error" for="email"></label>
+                </div>
+                <div class="request__plans">
+                    <p class="request__text">Your plan?</p>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" name="plans" id="radio1">
+                        <label class="radio__label radio__label-first" for="radio1"></label>
+                        <svg class="radio__icon">
+                            <use href="./src/icons/sprite.svg#check"></use>
+                        </svg>
+                    </div>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" name="plans" id="radio2">
+                        <label class="radio__label radio__label-second" for="radio2"></label>
+                        <svg class="radio__icon">
+                            <use href="./src/icons/sprite.svg#check"></use>
+                        </svg>
+                    </div>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" name="plans" id="radio3">
+                        <label class="radio__label radio__label-third" for="radio3"></label>
+                        <svg class="radio__icon">
+                            <use href="./src/icons/sprite.svg#check"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="request__our-app">
+                    <p class="request__text request__text_margin">How did you know about our app?</p>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="facebook" id="facebook">
+                        <label class="checkbox__label" for="facebook">Facebook</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="instagram" id="instagram">
+                        <label class="checkbox__label" for="instagram">Instagram</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="youtube" id="youtube">
+                        <label class="checkbox__label" for="youtube">Youtube</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" name="other" id="other">
+                        <label class="checkbox__label" for="other">Other</label>
+                    </div>
+                </div>
+                <button class="button request__submit" type="submit" id="submit">Send</button>
+                <div class="loading loading_hide">
+                    <img class="loading__img" src="./src/icons/loading.svg" alt="loading">
+                    <span class="loading__span">Loading...</span>
+                </div>
+            </form>
+            <img class="modal_close" src="./src/icons/cross.svg" alt="cross">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/config.js"></script>
+    <script type="text/javascript" src="./js/modal.js"></script>
+    <script type="text/javascript" src="./js/sidebar.js"></script>
+    <script type="text/javascript" src="./js/timer.js"></script>
+    <script type="text/javascript" src="./js/mode.js"></script>
 </body>
 </html>

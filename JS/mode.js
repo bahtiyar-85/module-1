@@ -1,5 +1,8 @@
 
+
 document.addEventListener('DOMContentLoaded', function() {
+    
+   
     const modeElem = document.querySelector(".mode");
     const modeTitleElem = document.querySelector(".mode__title-l1_margin");
     const modeTitle2Elem = document.querySelector(".mode__title-l2_margin");

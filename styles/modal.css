@@ -1,0 +1,266 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 100;
+    overflow-y: auto;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+.modal_show {
+    visibility: none;
+    opacity: 1;
+    transition: opacity 1s;  
+}
+.modal_hide {
+    visibility: hidden;
+    opacity: 0;
+}
+.modal__content {
+    max-width: 506px;
+    height: 815px;
+    margin: auto;
+    padding-top: 38px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.modal_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 28px;
+    right: 29px;
+    cursor: pointer;
+}
+.input {
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 9px 17px; 
+    color: #000;
+}
+.input-valid {
+    background-color: #F2F2F2;
+}
+.input-error {
+    background-color: #FFEEEE;
+}
+.input:focus {
+    outline: 2px solid #5AB0FF;
+}
+.input::placeholder {
+    color: #7D7D7D;
+}
+.input-error-message {
+    display: inline-block;
+    height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FF5437;
+    padding-left: 10px;
+}
+.radio {
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+    height: 42px;
+}
+.radio__input {
+    appearance: none;
+}
+.radio__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #FAFAFA;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+}
+.radio__label-first {
+    color: #0278ED;
+    border: 1px solid #0278ED;
+}
+.radio__input:checked + .radio__label-first {
+    background: #0278ED;
+    color: #fff;
+}
+.radio__label-second {
+    color: #FF5437;
+    border: 1px solid #FF5437;
+}
+.radio__input:checked + .radio__label-second {
+    background: #FF5437;
+    color: #fff;
+}
+.radio__label-third {
+    color: #FF9209;
+    border: 1px solid #FF9209;
+}
+.radio__input:checked + .radio__label-third {
+    background: #FF9209;
+    color: #fff;
+}
+.radio__icon {
+    fill: #FAFAFA;
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.checkbox {
+    margin: 8px 0;
+    position: relative;
+    width: 130px;
+}
+.checkbox__input {
+    appearance: none;
+}
+.checkbox__label {
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 44px;
+    cursor: pointer;
+}
+.checkbox__label::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #0278ED;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.checkbox__label::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("../src/icons/check-mark.svg") no-repeat;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+}
+.checkbox__input:checked + .checkbox__label::after {
+    opacity: 1;
+}
+
+.request {
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.request__title {
+    display: inline-block;
+    max-width: 250px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+.request__input-items {
+    margin-top: 42px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.request__plans {
+    padding-top: 6px;
+    width: 100%;
+}
+.request__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-align: center;
+}
+.request__text_margin {
+    margin-bottom: 15px;
+}
+.request__our-app {
+    margin-top: 32px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.request__submit {
+    width: 172px;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    fill: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.loading {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.loading_show {
+    display: flex;
+}
+.loading_hide {
+    display: none;
+}
+.loading__img {
+    width: 16px;
+    height: 24px;
+    animation: 2s linear infinite running rotating;
+}
+.loading__span {
+    margin-left: 17px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7E7E7E;
+}
+
+@keyframes rotating {
+    0% {
+      transform: rotate(360deg);
+    }
+    25% {
+        transform: rotate(270deg);
+      }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
