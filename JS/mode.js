@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modeElem.classList.toggle("mode_theme-dark");
         modeElem.classList.toggle("mode_theme-light"); 
     }
+
     lightModeBtnElem.addEventListener('click', function(){
         if(modeElem.classList.contains("mode_theme-dark")){
             toggleMode();
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modeTitle.textContent = "light mode";
         }
     });
+    
     darkModeBtnElem.addEventListener('click', function(){
         if(modeElem.classList.contains("mode_theme-light")){
             toggleMode();

@@ -182,4 +182,49 @@
     .features__header-title_width {
         width: 90vw;
     }
+    .statistic__title{
+        display: inline-block;
+        height: 40px;   
+    }
+}
+@media (max-width: 420px) {
+    .card {
+        width: 285px;
+        height: 360px;
+    } 
+    .card-top {
+        height: 200px;
+    }
+    .card-top__img {
+        width: 150px;
+        left: 70px;
+    }
+    .card-bottom {
+        top: 200px;
+        left: 0;
+        height: 160px;
+    }
+    .card-top__icon {
+        top: 176px;
+        left: 122px;
+        width: 48px;
+        height: 48px;
+    }
+    .card-bottom__title {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 22px;
+        
+    }
+    .card-bottom__description {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 380px) {
+    .statistic__value {
+        font-size: 28px;
+    }
 }

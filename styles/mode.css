@@ -121,11 +121,24 @@
 .mode_theme-light .mode__sun {
     fill: #FF9209;
 }
-@media (max-width: 620px) {
+@media (max-width: 630px) {
     .mode__description {
         width: 90vw;
     }
     .mode__items {
-        width: 100vw;
+        width: 90vw;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+    }
+    .mode__image{
+        height: 300px;
+    }
+}
+@media (max-width: 400px) {
+    .mode .title-l2{
+        font-size: 24px;
+    }
+    .mode__description{
+        font-size: 14px;
     }
 }

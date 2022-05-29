@@ -13,6 +13,7 @@
     font-size: 18px;
     margin-top: 14px;
     margin-bottom: 40px;
+    text-align: center;
 }
 .testimonials__items {
     width: 100%;
@@ -53,4 +54,23 @@
     color: #1B1A1A;
     line-height: 20px;
     font-size: 14px;
+}
+@media (max-width: 1000px){
+    .testimonials__items{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .testimonial{
+        margin: 8px;
+    }
+}
+@media(max-width: 600px){
+    .testimonials{
+        padding: 15vw 0;
+    }
+}
+@media (max-width: 400px){
+    .testimonial{
+        height: auto;
+    }
 }

@@ -30,3 +30,8 @@
     width: 25px;
     height: 25px;
 }
+@media(max-width: 600px){
+    .footer {
+        padding: 15vw 0;
+    }
+}

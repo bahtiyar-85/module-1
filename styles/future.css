@@ -64,3 +64,20 @@
         margin-top: 5vw;
     }
 }
+@media (max-width: 450px) {
+    .future__details {
+        padding: 80px 5vw;
+    }
+    .future__items {
+        width: 100%;
+    }
+    .future__description {
+        width: 100%;
+    }
+    .future__buy_btn-width {
+        width: 120px;
+    }
+    .future__read_btn-width {
+        width: 125px;
+    }
+}

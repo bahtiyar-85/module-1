@@ -58,6 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(data);
     }
 
+    function addAnimation(){
+        const checkBox = document.querySelectorAll(".checkbox__input");
+        for(let item of checkBox){
+            item.classList.toggle("checkbox_error");
+        }
+    }    
     function checkFormIsValid(){
         const checkBox = document.querySelectorAll(".checkbox__input");
         let formValid = true;
@@ -77,7 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         if(checked === false){
-            alert('You must select at least 1 item!');
+            addAnimation();
+            setTimeout( addAnimation, 1000);
             formValid = false;
         }
         return formValid;
