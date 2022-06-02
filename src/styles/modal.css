@@ -21,7 +21,7 @@
 }
 .modal__content {
     max-width: 506px;
-    height: 815px;
+    height: 845px;
     margin: auto;
     padding-top: 38px;
     background-color: #fff;
@@ -82,14 +82,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    display: inline-block;
     width: 100%;
     height: 100%;
     background: #FAFAFA;
     border-radius: 4px;
-    align-items: center;
-    justify-content: center; 
+    text-align: center;
+    padding-top: 8px;
     cursor: pointer;
+}
+.radio__label::first-letter{
+    text-transform: uppercase;
 }
 .radio__label-first {
     color: #0278ED;
@@ -226,7 +229,7 @@
     left: 0;
 }
 .loading {
-    margin-top: 15px;
+    margin-top: 28px;
     display: flex;
     align-items: center;
 }

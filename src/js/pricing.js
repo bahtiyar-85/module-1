@@ -6,10 +6,6 @@ function pricingValueInit() {
     const buyNow = document.querySelectorAll(".open-modal");
     const modal = document.querySelector(".modal");
 
-    function firstLetterToUp(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
     function setMaxPriceRadioInput(plans){
         const radioInput = document.querySelectorAll(".radio__input");
         let max = 0;
@@ -27,7 +23,10 @@ function pricingValueInit() {
         const inputBoxs = document.querySelectorAll(".input");
         const checkBoxs = document.querySelectorAll(".checkbox__input");
         for(let item of inputBoxs){
-            item.value = "";       
+            item.value = "";
+            item.classList.remove("input-error");
+            item.classList.add("input-valid");
+            item.nextElementSibling.textContent = "";         
         }
         for(let item of checkBoxs){
             item.checked = false;       
@@ -45,7 +44,7 @@ function pricingValueInit() {
     }
 
     for(let i=0; i<priceTitle.length; i++){
-        priceTitle[i].textContent = firstLetterToUp(config.plans[i].name);
+        priceTitle[i].textContent = config.plans[i].name;
         priceValue[i].textContent = "$" + config.plans[i].price;
     }
 

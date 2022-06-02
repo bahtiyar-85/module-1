@@ -6,21 +6,20 @@ function  timerInit() {
     const timerElement = document.querySelector('.timer');
 
     function addZero(number){
-        if(number <= 9 && number > 0 ) return "0" + number;
-        return number;
+        return number.toString().padStart(2, "0");
     }
 
     function calcTime(timer) { 
-        const deadlineDate = new Date(timer[2], timer[1]-1, timer[0], timer[3], timer[4]);
+        const [days, months, years, minutes, seconds] = timer;
+        const deadlineDate = new Date(years,  months-1, days, minutes, seconds);
         const differenceTime = deadlineDate.getTime() - Date.now();
         
         if(differenceTime>0){
             const days = addZero(Math.floor( differenceTime / 1000 / 60 / 60 / 24));
-            const hours =addZero(Math.floor( differenceTime / 1000 / 60 / 60 % 24));
+            const hours = addZero(Math.floor( differenceTime / 1000 / 60 / 60 % 24));
             const minutes = addZero(Math.floor( differenceTime / 1000 / 60) % 60);
             const seconds = addZero(Math.floor(differenceTime / 1000) % 60);
-            let clock = {
-                timeOut: false,
+            const clock = {
                 days,
                 hours,
                 minutes,
@@ -28,7 +27,7 @@ function  timerInit() {
             }
             return clock;
         } else {
-            let clock = {timeOut: true};
+            const clock = 0;
             return clock;
         }
       
@@ -36,7 +35,7 @@ function  timerInit() {
 
     function countdownTimer() {
         const clock = calcTime(timer);
-        if(!clock.timeOut){
+        if(clock){
             document.querySelector("#days").textContent = clock.days;
             document.querySelector("#hours").textContent = clock.hours;
             document.querySelector("#minutes").textContent = clock.minutes;
@@ -50,7 +49,7 @@ function  timerInit() {
         }
     }
 
-    
+    countdownTimer();
     timerId = setInterval(countdownTimer, 1000);        
 }
 export { timerInit };

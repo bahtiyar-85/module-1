@@ -7,10 +7,6 @@ function modalInit() {
     const inputBox = document.querySelectorAll(".input");
     const form = document.querySelector(".request");
 
-    function firstLetterToUp(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
     function isValid(value){
         if(value === "") {
             let obj = {valid: false, error: "required field"};
@@ -27,33 +23,24 @@ function modalInit() {
         const radioLabel = document.querySelectorAll(".radio__label");
 
         for(let i=0; i<radioLabel.length; i++){
-            radioLabel[i].textContent = firstLetterToUp(plans[i].name);
+            radioLabel[i].textContent = plans[i].name;
         }
     }
 
     function getDateFromForm(){
-        let data = [];
+        let object = {}
         for(let item of form){
             if(item.type==="text" || item.type==="email"){
-                let obj = {
-                    name: item.name,
-                    id: item.id,
-                    value: item.value,
-                    type: item.type
-                }
-                data.push(obj);
+                object[item.name] = item.value;
             }
-            if(item.type==="radio" && item.checked || item.type==="checkbox" && item.checked){
-                let obj = {
-                    name: item.name,
-                    id: item.id,
-                    checked: item.checked,
-                    type: item.type
-                }
-                data.push(obj);
+            if(item.type==="radio" && item.checked){
+                object[item.name] = item.nextElementSibling.textContent;
+            }
+            if(item.type==="checkbox" && item.checked){
+                object[item.name] = "on";
             }
         }
-        console.log(data);
+        console.log(object);
     }
 
     function addAnimation(){
@@ -70,8 +57,8 @@ function modalInit() {
         for(let item of inputBox){
             const itemCheckIsValid = isValid(item.value);
             if(!itemCheckIsValid.valid){
-                item.classList.remove("input-error");
-                item.classList.add("input-valid");
+                item.classList.add("input-error");
+                item.classList.remove("input-valid");
                 item.nextElementSibling.textContent = itemCheckIsValid.error;  
                 formValid = false;
             }             

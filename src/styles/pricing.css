@@ -45,6 +45,9 @@
     line-height: 24px;
     text-align: center;
 }
+.price__title::first-letter {
+    text-transform: uppercase;
+}
 .price__title_color-blue {
     color: #0278ED;
 }
@@ -76,6 +79,7 @@
 .price__btn_color-yellow {
     background-color: #FF9209;
 }
+
 @media (max-width:900px){
     .price__value {
         font-size: 70px;

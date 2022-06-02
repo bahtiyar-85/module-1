@@ -11,22 +11,22 @@
             modeElem.classList.toggle("mode_theme-light"); 
         }
 
-        const changeContent = (title) => {
+        const changeTextContent = (title) => {
             modeSpanElem.textContent = title;
-            modeTitle.textContent = `${title} mode `;
+            modeTitle.textContent = `${title} mode`;
         }
 
         lightModeBtnElem.addEventListener('click', function(){
             if(modeElem.classList.contains("mode_theme-dark")){
                 toggleMode();
-                changeContent("light");
+                changeTextContent("light");
             }
         });
         
         darkModeBtnElem.addEventListener('click', function(){
             if(modeElem.classList.contains("mode_theme-light")){
                 toggleMode();
-                changeContent("dark");
+                changeTextContent("dark");
             }
         })
     }
