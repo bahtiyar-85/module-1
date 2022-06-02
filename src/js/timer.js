@@ -1,7 +1,6 @@
 import config from "/src/data/config.json" assert {type: "json"};
 
-document.addEventListener('DOMContentLoaded', function() {
-   
+function  timerInit() {
     const timer = config.timerEndDate.split(/\s|\.|\:/);
     let timerId = null;
     const timerElement = document.querySelector('.timer');
@@ -51,5 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    timerId = setInterval(countdownTimer, 1000);
-});
+    
+    timerId = setInterval(countdownTimer, 1000);        
+}
+export { timerInit };

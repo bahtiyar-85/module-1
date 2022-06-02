@@ -1,6 +1,6 @@
 import config from "/src/data/config.json" assert {type: "json"};
 
-document.addEventListener('DOMContentLoaded', function() {
+function modalInit() {
     const plans = [ ...config.plans];
     const modal = document.querySelector(".modal");
     const modalClose = document.querySelector(".modal_close");
@@ -31,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-  
-    
     function getDateFromForm(){
         let data = [];
         for(let item of form){
@@ -63,7 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
         for(let item of checkBox){
             item.classList.toggle("checkbox_error");
         }
-    }    
+    } 
+
     function checkFormIsValid(){
         const checkBox = document.querySelectorAll(".checkbox__input");
         let formValid = true;
@@ -90,45 +89,46 @@ document.addEventListener('DOMContentLoaded', function() {
         return formValid;
     }
 
-    setRadioInputTitle(plans);
+   
+        setRadioInputTitle(plans);
 
-    modalClose.addEventListener("click", function(){
-        modal.classList.add("modal_hide");
-        modal.classList.remove("modal_show");
-    })
-
-    for(let item of inputBox){
-        item.addEventListener('focusout', function(e){
-            const itemCheckIsValid = isValid(e.target.value);
-            if(!itemCheckIsValid.valid){
-                e.target.classList.add("input-error");
-                e.target.classList.remove("input-valid");
-                document.querySelector(`[for="${e.target.id}"]`).textContent = itemCheckIsValid.error;               
-            }
+        modalClose.addEventListener("click", function(){
+            modal.classList.add("modal_hide");
+            modal.classList.remove("modal_show");
         })
-    }
 
-    for(let item of inputBox){
-        item.addEventListener('focus', function(e){
-            e.target.classList.remove("input-error");
-            e.target.classList.add("input-valid");
-            document.querySelector(`[for="${e.target.id}"]`).textContent = "";               
+        for(let item of inputBox){
+            item.addEventListener('focusout', function(e){
+                const itemCheckIsValid = isValid(e.target.value);
+                if(!itemCheckIsValid.valid){
+                    e.target.classList.add("input-error");
+                    e.target.classList.remove("input-valid");
+                    document.querySelector(`[for="${e.target.id}"]`).textContent = itemCheckIsValid.error;               
+                }
+            })
+        }
+
+        for(let item of inputBox){
+            item.addEventListener('focus', function(e){
+                e.target.classList.remove("input-error");
+                e.target.classList.add("input-valid");
+                document.querySelector(`[for="${e.target.id}"]`).textContent = "";               
+            })
+        }
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const check = checkFormIsValid();
+            if(check){
+                const loading = document.querySelector(".loading");
+                loading.classList.remove('loading_hide');
+                loading.classList.add('loading_show');
+                setTimeout(function(){
+                    loading.classList.remove('loading_show');
+                    loading.classList.add('loading_hide');
+                    getDateFromForm();
+                } , 2000);
+            } 
         })
-    }
-
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-        const check = checkFormIsValid();
-        if(check){
-            const loading = document.querySelector(".loading");
-            loading.classList.remove('loading_hide');
-            loading.classList.add('loading_show');
-            setTimeout(function(){
-                loading.classList.remove('loading_show');
-                loading.classList.add('loading_hide');
-                getDateFromForm();
-            } , 2000);
-        } 
-    })
-  
-});
+};
+export { modalInit };

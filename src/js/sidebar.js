@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function sidebarInit() {
     
     const burger = document.querySelector(".burger");
     const sidebar = document.querySelector(".sidebar");
@@ -15,4 +15,5 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.add("sidebar_hide");
         })
     }
-});
+};
+export { sidebarInit };

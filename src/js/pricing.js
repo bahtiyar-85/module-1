@@ -1,7 +1,6 @@
 import config from "/src/data/config.json" assert {type: "json"};
 
-document.addEventListener('DOMContentLoaded', function() {
-
+function pricingValueInit() {
     const priceTitle = document.querySelectorAll(".price__title");
     const priceValue = document.querySelectorAll(".price__value");
     const buyNow = document.querySelectorAll(".open-modal");
@@ -58,4 +57,5 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.classList.remove("modal_hide");
         })
     }
-});
+};
+export { pricingValueInit };
