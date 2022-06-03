@@ -3,7 +3,7 @@ import config from "/src/data/config.json" assert {type: "json"};
 function modalInit() {
     const plans = [ ...config.plans];
     const modal = document.querySelector(".modal");
-    const modalClose = document.querySelector(".modal_close");
+    const closeCrossBtn = document.querySelector(".modal_close");
     const inputBox = document.querySelectorAll(".input");
     const form = document.querySelector(".request");
 
@@ -30,13 +30,13 @@ function modalInit() {
     function getDateFromForm(){
         let object = {}
         for(let item of form){
-            if(item.type==="text" || item.type==="email"){
+            if(item.type === "text" || item.type === "email"){
                 object[item.name] = item.value;
             }
-            if(item.type==="radio" && item.checked){
+            if(item.type === "radio" && item.checked){
                 object[item.name] = item.nextElementSibling.textContent;
             }
-            if(item.type==="checkbox" && item.checked){
+            if(item.type === "checkbox" && item.checked){
                 object[item.name] = "on";
             }
         }
@@ -55,11 +55,11 @@ function modalInit() {
         let formValid = true;
         let checked = false;
         for(let item of inputBox){
-            const itemCheckIsValid = isValid(item.value);
-            if(!itemCheckIsValid.valid){
+            const validResult = isValid(item.value);
+            if(!validResult.valid){
                 item.classList.add("input-error");
                 item.classList.remove("input-valid");
-                item.nextElementSibling.textContent = itemCheckIsValid.error;  
+                item.nextElementSibling.textContent = validResult.error;  
                 formValid = false;
             }             
         }
@@ -76,13 +76,13 @@ function modalInit() {
         return formValid;
     }
 
+    function closeModal(){
+        modal.classList.add("modal_hide");
+        modal.classList.remove("modal_show");
+    }
    
         setRadioInputTitle(plans);
 
-        modalClose.addEventListener("click", function(){
-            modal.classList.add("modal_hide");
-            modal.classList.remove("modal_show");
-        })
 
         for(let item of inputBox){
             item.addEventListener('focusout', function(e){
@@ -102,6 +102,14 @@ function modalInit() {
                 document.querySelector(`[for="${e.target.id}"]`).textContent = "";               
             })
         }
+       
+        closeCrossBtn.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", function(e){
+            if(e.target === modal){
+                closeModal();
+            }
+        })
 
         form.addEventListener('submit', function(e){
             e.preventDefault();

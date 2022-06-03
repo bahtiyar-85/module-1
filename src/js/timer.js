@@ -14,7 +14,7 @@ function  timerInit() {
         const deadlineDate = new Date(years,  months-1, days, minutes, seconds);
         const differenceTime = deadlineDate.getTime() - Date.now();
         
-        if(differenceTime>0){
+        if(differenceTime > 0){
             const days = addZero(Math.floor( differenceTime / 1000 / 60 / 60 / 24));
             const hours = addZero(Math.floor( differenceTime / 1000 / 60 / 60 % 24));
             const minutes = addZero(Math.floor( differenceTime / 1000 / 60) % 60);
@@ -26,10 +26,7 @@ function  timerInit() {
                 seconds
             }
             return clock;
-        } else {
-            const clock = 0;
-            return clock;
-        }
+        } else  return 0;
       
     }
 
