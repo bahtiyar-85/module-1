@@ -8,7 +8,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    padding-top: 90px;
+    padding-top: 90px;  
+   
 }
 .container {
     max-width: 1200px;

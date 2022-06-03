@@ -2,6 +2,12 @@ import config from "/src/data/config.json" assert {
     type: "json"
 };
 
+function toggleModal() {
+    const modal = document.querySelector(".modal");
+    modal.classList.toggle("modal_hide");
+    modal.classList.toggle("modal_show");
+}
+
 function modalInit() {
     const plans = [...config.plans];
     const modal = document.querySelector(".modal");
@@ -87,13 +93,9 @@ function modalInit() {
         return formValid;
     }
 
-    function closeModal() {
-        modal.classList.add("modal_hide");
-        modal.classList.remove("modal_show");
-    }
+   
 
     setRadioInputTitle(plans);
-
 
     for (let item of inputBox) {
         item.addEventListener('focusout', function (e) {
@@ -114,11 +116,11 @@ function modalInit() {
         })
     }
 
-    closeCrossBtn.addEventListener("click", closeModal);
+    closeCrossBtn.addEventListener("click", toggleModal);
 
     modal.addEventListener("click", function (e) {
         if (e.target === modal) {
-            closeModal();
+            toggleModal();
         }
     })
 
@@ -138,5 +140,6 @@ function modalInit() {
     })
 };
 export {
-    modalInit
+    modalInit,
+    toggleModal
 };

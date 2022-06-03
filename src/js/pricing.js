@@ -1,12 +1,12 @@
 import config from "/src/data/config.json" assert {
     type: "json"
 };
-
+import { toggleModal } from './modal';
+ 
 function pricingValueInit() {
     const priceTitle = document.querySelectorAll(".price__title");
     const priceValue = document.querySelectorAll(".price__value");
     const buyNow = document.querySelectorAll(".open-modal");
-    const modal = document.querySelector(".modal");
 
     function setMaxPriceRadioInput(plans) {
         const radioInput = document.querySelectorAll(".radio__input");
@@ -55,8 +55,7 @@ function pricingValueInit() {
         item.addEventListener('click', function (e) {
             handleButtonClick(e.target);
             setDefaultValues();
-            modal.classList.add("modal_show");
-            modal.classList.remove("modal_hide");
+            toggleModal();
         })
     }
 };
