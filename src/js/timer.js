@@ -5,7 +5,7 @@ function  timerInit() {
     let timerId = null;
     const timerElement = document.querySelector('.timer');
 
-    function addZero(number){
+    function toStrConvert(number){ 
         return number.toString().padStart(2, "0");
     }
 
@@ -15,10 +15,10 @@ function  timerInit() {
         const differenceTime = deadlineDate.getTime() - Date.now();
         
         if(differenceTime > 0){
-            const days = addZero(Math.floor( differenceTime / 1000 / 60 / 60 / 24));
-            const hours = addZero(Math.floor( differenceTime / 1000 / 60 / 60 % 24));
-            const minutes = addZero(Math.floor( differenceTime / 1000 / 60) % 60);
-            const seconds = addZero(Math.floor(differenceTime / 1000) % 60);
+            const days = toStrConvert(Math.floor( differenceTime / 1000 / 60 / 60 / 24));
+            const hours = toStrConvert(Math.floor( differenceTime / 1000 / 60 / 60 % 24));
+            const minutes = toStrConvert(Math.floor( differenceTime / 1000 / 60) % 60);
+            const seconds = toStrConvert(Math.floor(differenceTime / 1000) % 60);
             const clock = {
                 days,
                 hours,

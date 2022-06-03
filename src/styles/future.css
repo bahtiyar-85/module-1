@@ -4,7 +4,7 @@
 }
 .future__details {
     width: 50%;
-    padding: 130px 0;
+    padding: 140px 0;
     display: flex;
     justify-content: center;
 }
@@ -46,7 +46,7 @@
 }
 .future__image {
     width: 50%;
-    margin-top: 73px;
+    margin-top: 85px;
     display: flex;
     justify-content: center;
 }
